@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>Exercice Routeur MVC</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li>
+						<a href="index.php">Accueil</a>
+					</li>
+					<li>
+						<a href="index.php?route=connexion">connection</a>
+					</li>
+                    <li>
+						<a href="index.php?route=inscription">Inscription</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<?php
+			// votre code ici
+
+		if ($template === "home") {
+			require "templates/home.phtml";
+		}
+		elseif ($template === "connexion") {
+			require "templates/connexion.phtml";
+		}
+		elseif ($template === "inscription") {
+			require "templates/inscription.phtml";
+		}
+		elseif ($template === "espace-perso") {
+			require "templates/espace-perso.phtml";
+		}
+		elseif ($template === "check-connexion") {
+			require "templates/home.phtml";
+		}
+		?>
+	</body>
+</html>
